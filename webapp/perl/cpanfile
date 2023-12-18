@@ -1,0 +1,16 @@
+requires 'perl', '5.038';
+
+requires 'Kossy', '0.63';
+requires 'Plack::Middleware::Session', '0.33';
+requires 'HTTP::Message', '6.45';
+requires 'Starlet', '0.31';
+requires 'Cache::Memcached::Fast::Safe', '0.06';
+requires 'String::ShellQuote', '1.04';
+requires 'DBIx::Sunny', '0.9993';
+requires 'Log::Minimal', '0.19';
+requires 'Crypt::URandom', '0.39';
+
+# DBD::mysql@5.01 requires requires MySQL 8.x client libraries.
+# https://github.com/perl5-dbi/DBD-mysql/issues/378#issuecomment-1786759895
+requires 'DBD::mysql', '== 4.051';
+

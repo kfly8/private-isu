@@ -1,0 +1,16 @@
+: cascade layout
+: around content {
+<div>
+  <form method="post" action="/admin/banned">
+    : for $users -> $user {
+    <div>
+      <input type="checkbox" name="uid[]" id="uid_<: $uesr.id :>" value="<: $user.id :>" data-account-name="<: $user.account_name :>"> <label for="uid_<: $user.id :>"><: $user.account_name :></label>
+    </div>
+    : }
+    <div class="form-submit">
+      <input type="hidden" name="csrf_token" value="<: $csrf_token :>">
+      <input type="submit" name="submit" value="submit">
+    </div>
+  </form>
+</div>
+: }

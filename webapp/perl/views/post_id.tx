@@ -1,0 +1,4 @@
+: cascade layout
+: around content {
+:   include "post.tx" { post => $post, csrf_token => $csrf_token }
+: }
